@@ -1,2 +1,10 @@
 # Clustering-and-explainability-on-European-Social-Survey
-Clustering con K-Means e studio sull'explainability del modello AI.
+Il progetto utilizza i dati raccolti dall'European Social Survey European Research Infrastructure Consortium tra il 2023 e il 2024. La ricerca ha coinvolto 31 paesi europei (Austria, Belgio, Croazia, Cipro, Finlandia, Francia, Germania, Grecia, Irlanda, Islanda, Italia, Lituania, Norvegia, Paesi Bassi, Polonia, Portogallo, Regno Unito, Serbia, Slovacchia, Slovenia, Spagna, Svezia, Svizzera, Ungheria) e riguarda condizioni e indicatori sociali, comportamenti e attitudini, salute e benessere generale, comportamenti e attitudini politiche, identità culturale e nazionale, disuguaglianze ed esclusione sociale, religioni e valori, e altro ancora.
+
+European Social Survey European Research Infrastructure (ESS ERIC) (2024) ESS11 - integrated file, edition 2.0 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess11e02_0.
+
+I dati sono quindi reali, ma sono stati anonimizzati. I nomi delle persone sono stati sostituiti da un numero identificativo (variabile 'idno'); dati come la regione di residenza e il reddito annuo sono stati invece generalizzati. Altri dati come l'anno di nascita o l'appartenenza a un gruppo minoritario sono invece ancora presenti e non generalizzati, ma per il numero di sample non sono degli identificatori.
+
+La domanda che ci ha guidati è: quali profili di persone è possibile delineare nei paesi coinvolti nella ricerca, in base alla loro fiducia nelle persone e nelle istituzioni, alla loro soddisfazione, alla loro partecipazione alla società, etc.?
+
+Per provare a rispondere, abbiamo innanzitutto fatto clustering con K-means; in seguito abbiamo aggiunto l'etichetta corrispondente al cluster assegnato al DataFrame e abbiamo addestrato un modello di apprendimento supervisionato, Random Forest, a predire il cluster di appartenenza di ciascun individuo; infine abbiamo applicato e confrontato tra loro tecniche di spiegabilità globali e locali per provare a capire in base a quali feature le persone sono state raggruppate.
